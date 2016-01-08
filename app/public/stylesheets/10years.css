@@ -42,10 +42,6 @@ md-toolbar h1 {
   background-image: url(/assets/super-mario-maker.jpg);
 }
 
-md-grid-tile {
-  transition: all 400ms ease-out 50ms;
-}
-
 md-grid-tile-footer {
   background: rgba(0, 0, 0, 0.68);
 }

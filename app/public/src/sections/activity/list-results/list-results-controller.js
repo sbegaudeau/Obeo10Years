@@ -3,7 +3,7 @@
 class ActivityListResultsController {
   constructor($scope, $state, $stateParams, $http, $mdToast) {
     $scope.activity = $stateParams.activity;
-    
+
     $scope.goTo = (stateName) => {
       $state.go(stateName, {activity: $stateParams.activity});
     };
@@ -20,12 +20,7 @@ class ActivityListResultsController {
     };
 
     $scope.getResultScore = (result) => {
-      let score = result.score + ' tableaux';
-      if (result.score === 0) {
-        score = 'Aucun tableau';
-      } else if (result.score === 1) {
-        score = '1 tableau';
-      }
+      let score = result.score;
 
       let date = new Date(result.createdAt);
       date = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
