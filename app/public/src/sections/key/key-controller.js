@@ -7,7 +7,7 @@ class KeyController {
     };
 
     let currentKey = $cookies.get('OBEO_10YEARS_API_KEY');
-    if (currentKey !== undefined || currentKey.length > 0) {
+    if (currentKey !== undefined && currentKey.length > 0) {
       $scope.key = currentKey;
     }
 
