@@ -63,6 +63,3 @@ md-list-item .md-list-item-inner > .md-list-item-inner > p {
   user-select: none;
   /* Likely future */
 }
-.secondary-button-padding p {
-    padding-right: 100px;
-}
