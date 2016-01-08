@@ -18,10 +18,10 @@ app.use('/', express.static(__dirname + '/public'));
 
 app.use(require('./errors/not-found'));
 
-app.listen(config.express.port, config.express.ip, (error) => {
+app.listen(config.express.port, (error) => {
   if (error) {
     console.log(error);
     process.exit(10);
   }
-  console.log('express is listening on http://' + config.express.ip + ':' + config.express.port);
+  console.log('express is listening on the port ' + config.express.port);
 });
