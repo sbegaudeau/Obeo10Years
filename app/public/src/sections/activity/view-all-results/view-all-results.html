@@ -4,10 +4,10 @@
       <span>{{activity}} - classement</span>
     </h2>
     <span flex></span>
-    <md-button class="md-icon-button" aria-label="New">
+    <md-button class="md-icon-button" aria-label="New" ng-show="hasAPIKey()">
       <md-icon md-svg-icon="assets/new.svg" ng-click="goTo('activityNewResult')"></md-icon>
     </md-button>
-    <md-button class="md-icon-button" aria-label="List">
+    <md-button class="md-icon-button" aria-label="List" ng-show="hasAPIKey()">
       <md-icon md-svg-icon="assets/list.svg" ng-click="goTo('activityListResults')"></md-icon>
     </md-button>
     <md-button class="md-icon-button" aria-label="Home">

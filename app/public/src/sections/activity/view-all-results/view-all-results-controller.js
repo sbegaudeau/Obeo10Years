@@ -1,11 +1,15 @@
 'use strict';
 
 class ActivityViewAllResultsController {
-  constructor($scope, $state, $stateParams, $http) {
+  constructor($scope, $state, $stateParams, $http, $cookies) {
     $scope.activity = $stateParams.activity;
 
     $scope.goTo = (stateName) => {
       $state.go(stateName, {activity: $stateParams.activity});
+    };
+
+    $scope.hasAPIKey = () => {
+      return $cookies.get('OBEO_10YEARS_API_KEY') !== undefined;
     };
 
     $http.get('/api/v1.0/activities/' + $stateParams.activity + '/results').then((response) => {
@@ -31,6 +35,7 @@ let activityViewAllResultsControllerDeclaration = [
   '$state',
   '$stateParams',
   '$http',
+  '$cookies',
   ActivityViewAllResultsController
 ];
 
