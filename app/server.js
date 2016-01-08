@@ -3,7 +3,7 @@
 var config = require('./config');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://' + config.mongodb.host + ':' + config.mongodb.post + '/' + config.mongodb.path);
+mongoose.connect(config.mongodb.url);
 
 var express = require('express');
 var app = express();

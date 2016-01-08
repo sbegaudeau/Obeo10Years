@@ -5,7 +5,7 @@ let Result = require('../models/result');
 let router = require('express').Router();
 
 let apiKeyHeader = 'x_obeo_10years_api_key';
-let REAL_API_KEY = process.env.API_KEY;
+let REAL_API_KEY = process.env.OBEO_API_KEY || 'jarjarbinks';
 
 let getResults = (req, res) => {
   Result.find({activity: req.params.activityId}, (err, results) => {

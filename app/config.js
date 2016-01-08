@@ -10,9 +10,7 @@ config.express = {
 };
 
 config.mongodb = {
-  port: process.env.MONGODB_PORT || 27017,
-  host: process.env.MONGODB_HOST || 'localhost',
-  path: process.env.MONGODB_HOST || 'test'
+  url: process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost:27017/test'
 };
 
 if (PRODUCTION) {
