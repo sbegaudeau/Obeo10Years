@@ -6,6 +6,9 @@
   "description": "Obeo 10 years anniversary server",
   "author": "Stéphane Bégaudeau",
   "license": "SEE LICENSE IN LICENSE.MD",
+  "scripts": {
+    "start": "node app/server.js"
+  },
   "dependencies": {
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
