@@ -17,7 +17,8 @@ app.use(bodyParser.json());
 app.use('/api/v1.0', require('./results/router'));
 app.use('/api/v1.0', require('./activities/router'))
 
-app.use('/', express.static(__dirname + '/public'));
+let oneDay = 86400000;
+app.use('/', express.static(__dirname + '/public', { maxAge: oneDay }));
 
 app.use(require('./errors/not-found'));
 
