@@ -7,10 +7,13 @@ mongoose.connect(config.mongodb.url);
 
 var express = require('express');
 var app = express();
+
+var compression = require('compression');
 var bodyParser = require('body-parser');
 
-
+app.use(compression());
 app.use(bodyParser.json());
+
 app.use('/api/v1.0', require('./results/router'));
 app.use('/api/v1.0', require('./activities/router'))
 

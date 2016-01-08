@@ -3,7 +3,7 @@
 let LargeCardDirective = () => {
   let directive = {};
   directive.template = '<md-card>' +
-                       '  <a ui-sref="leaderboard"><img ng-src="{{image}}" class="md-card-image" alt="Washed Out"></a>' +
+                       '  <a ui-sref="leaderboard"><img ng-src="{{image}}" class="md-card-image" alt="{{name}}"></a>' +
                        '  <md-card-title>' +
                        '    <md-card-title-text>' +
                        '      <span class="md-headline">{{name}}</span> {{score}}' +
