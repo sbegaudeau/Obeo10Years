@@ -1,0 +1,54 @@
+<md-toolbar layout="row" md-theme="{{ activity || 'default' }}" md-theme-watch>
+  <div class="md-toolbar-tools">
+    <h2>
+      <span>{{activity}} - nouveau r&eacute;sultat</span>
+    </h2>
+    <span flex></span>
+    <md-button class="md-icon-button" aria-label="Home">
+      <md-icon md-svg-icon="assets/back.svg" ng-click="goTo('activityViewAllResults')"></md-icon>
+    </md-button>
+  </div>
+</md-toolbar>
+
+<div layout-align="center start" layout="row" ng-cloak class="md-inline-form" md-theme="{{ activity || 'default' }}" md-theme-watch>
+  <md-content layout-padding flex-gt-sm="50" flex="90">
+    <div>
+      <form name="userForm">
+
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>&Eacute;quipe</label>
+            <md-select ng-model="user.team">
+              <md-option ng-repeat="team in teams" value="{{team.id}}">
+                {{team.label}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+
+        <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>R&eacute;sultat</label>
+
+            <input required type="number" step="any" name="score" ng-model="user.result" min="0" max="20" />
+            <div ng-messages="userForm.score.$error" multiple md-auto-hide="false">
+              <div ng-message="required">
+                Un score est nécessaire
+              </div>
+              <div ng-message="min">
+                Malheureusement, un score n&eacute;gatif n'est pas possible :)
+              </div>
+              <div ng-message="max">
+                {{userForm.score.$viewValue}} points ? C'est un peu beaucoup non ?
+              </div>
+            </div>
+          </md-input-container>
+        </div>
+
+        <div layout-gt-sm="row">
+          <md-button class="md-raised md-primary" ng-click="submitResult()" ng-disabled="userForm.score.$error.required || userForm.score.$error.min || userForm.score.$error.max">OK</md-button>
+        </div>
+      </form>
+    </div>
+  </md-content>
+</div>

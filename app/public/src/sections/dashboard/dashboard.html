@@ -1,0 +1,55 @@
+<md-toolbar layout="row" >
+  <div class="md-toolbar-tools">
+    <h1>
+      <span>Dashboard</span>
+    </h1>
+    <span flex></span>
+    <md-button class="md-icon-button" aria-label="SignIn">
+      <md-icon md-svg-icon="assets/key.svg" ng-click="goTo('key')"></md-icon>
+    </md-button>
+  </div>
+</md-toolbar>
+
+<div class="dashboard-body">
+  <md-grid-list class="dashboard-grid-list" md-cols-xs="1" md-cols-sm="1" md-cols-md="1" md-cols-gt-md="5"
+                md-row-height-gt-md="1:1" md-row-height="2:2"
+                md-gutter="12px" md-gutter-gt-sm="8px">
+
+    <md-grid-tile class="mario" md-rowspan="2" md-rowspan-xs="1" md-rowspan-sm="1" md-rowspan-md="1" md-colspan="1" ng-click="goTo('activityViewAllResults', 'mario')">
+      <md-grid-tile-footer>
+        <h3>Mario</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+
+    <md-grid-tile class="cocktail" md-colspan-gt-md="2" md-colspan-xs="1" md-colspan-sm="1" md-colspan-md="1" ng-click="goTo('activityViewAllResults', 'cocktail')">
+      <md-grid-tile-footer>
+        <h3>Cocktail</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+
+    <md-grid-tile class="lego" md-colspan-gt-md="2" md-colspan-ws="1" md-colspan-sm="1" md-colspan-md="1" ng-click="goTo('activityViewAllResults', 'lego')">
+      <md-grid-tile-footer>
+        <h3>Lego</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+
+    <md-grid-tile class="babyfoot" md-rowspan-gt-md="1" ng-click="goTo('activityViewAllResults', 'babyfoot')">
+      <md-grid-tile-footer>
+        <h3>Babyfoot</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+
+    <md-grid-tile class="leaderboard" md-rowspan-gt-md="1" md-colspan="2" md-colspan-xs="1" md-colspan-sm="1" md-colspan-md="1" ng-click="goTo('leaderboard')">
+      <md-grid-tile-footer>
+        <h3>Scores</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+
+    <md-grid-tile class="robots" md-rowspan-gt-md="1"  ng-click="goTo('activityViewAllResults', 'robots')">
+      <md-grid-tile-footer>
+        <h3>Robots</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+  </md-grid-list>
+
+</div>

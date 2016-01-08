@@ -1,0 +1,30 @@
+{
+  "name": "10years",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Front end application used to manage the results of the Obeo 10 year anniversary",
+  "license": "Proprietary",
+  "devDependencies": {
+    "karma": "~0.10",
+    "protractor": "^1.1.1",
+    "http-server": "^0.6.1",
+    "bower": "^1.3.1",
+    "shelljs": "^0.2.6",
+    "karma-junit-reporter": "^0.2.2",
+    "babelify": "^6.2.0",
+    "browserify": "^11.0.1",
+    "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-jshint": "^1.11.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-webserver": "^0.9.1",
+    "jshint-checkstyle-file-reporter": "0.0.1",
+    "jshint-stylish": "^2.0.1",
+    "opn": "^3.0.2",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "prestart": "npm update"
+  }
+}

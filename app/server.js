@@ -1,0 +1,27 @@
+'use strict'
+
+var config = require('./config');
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://' + config.mongodb.host + ':' + config.mongodb.post + '/' + config.mongodb.path);
+
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
+
+
+app.use(bodyParser.json());
+app.use('/api/v1.0', require('./results/router'));
+app.use('/api/v1.0', require('./activities/router'))
+
+app.use('/', express.static(__dirname + '/public'));
+
+app.use(require('./errors/not-found'));
+
+app.listen(config.express.port, config.express.ip, (error) => {
+  if (error) {
+    console.log(error);
+    process.exit(10);
+  }
+  console.log('express is listening on http://' + config.express.ip + ':' + config.express.port);
+});

@@ -1,0 +1,72 @@
+
+md-toolbar h1 {
+  margin: auto;
+}
+
+md-toolbar h1 {
+  font-size: 1.250em;
+  font-weight: 400;
+}
+
+.dashboard-body  {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+}
+
+.dashboard-grid-list {
+  margin-top: 40px;
+}
+
+.dashboard-grid-list .babyfoot {
+  background: #b9f6ca;
+}
+
+.dashboard-grid-list .robots {
+  background: #ffff8d;
+}
+
+.dashboard-grid-list .lego {
+  background: #84ffff;
+}
+
+.dashboard-grid-list .cocktail {
+  background: #b388ff;
+}
+
+.dashboard-grid-list .leaderboard {
+  background: #ff8a80;
+}
+
+.dashboard-grid-list .mario {
+  background-image: url(/assets/super-mario-maker.jpg);
+}
+
+md-grid-tile {
+  transition: all 400ms ease-out 50ms;
+}
+
+md-grid-tile-footer {
+  background: rgba(0, 0, 0, 0.68);
+}
+
+[ng-click], [data-ng-click], [x-ng-click] {
+  cursor: pointer;
+}
+
+md-list-item > p,
+md-list-item > .md-list-item-inner > p,
+md-list-item .md-list-item-inner > p,
+md-list-item .md-list-item-inner > .md-list-item-inner > p {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}
+.secondary-button-padding p {
+    padding-right: 100px;
+}

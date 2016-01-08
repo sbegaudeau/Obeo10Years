@@ -1,0 +1,22 @@
+<md-toolbar layout="row" >
+  <div class="md-toolbar-tools">
+    <h2>
+      <span>classement g&eacute;n&eacute;ral</span>
+    </h2>
+    <span flex></span>
+    <md-button class="md-icon-button" aria-label="Home">
+      <md-icon md-svg-icon="assets/home.svg" ng-click="goTo('dashboard')"></md-icon>
+    </md-button>
+  </div>
+</md-toolbar>
+
+<md-content class="md-padding" layout="row" layout-wrap layout-align="center start">
+
+  <div flex="60" flex-xs="100" layout="column">
+    <large-card result="first"></large-card>
+  </div>
+
+  <div flex="40" flex-xs="100" layout="column">
+    <small-card ng-repeat="other in others" result="other"></small-card>
+  </div>
+</md-content>

@@ -1,0 +1,17 @@
+{
+  "name": "obeo10years",
+  "version": "1.0.0",
+  "private": true,
+  "main": "app/server.js",
+  "description": "Obeo 10 years anniversary server",
+  "author": "Stéphane Bégaudeau",
+  "license": "SEE LICENSE IN LICENSE.MD",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "mongoose": "^4.3.4"
+  },
+  "engines": {
+    "node": "5.3.0"
+  }
+}

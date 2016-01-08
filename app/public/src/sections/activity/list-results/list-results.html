@@ -1,0 +1,31 @@
+<md-toolbar layout="row" md-theme="{{ activity || 'default' }}" md-theme-watch>
+  <div class="md-toolbar-tools">
+    <h2>
+      <span>{{activity}} - tous les r&eacute;sultats</span>
+    </h2>
+    <span flex></span>
+    <md-button class="md-icon-button" aria-label="Home">
+      <md-icon md-svg-icon="assets/back.svg" ng-click="goTo('activityViewAllResults')"></md-icon>
+    </md-button>
+  </div>
+</md-toolbar>
+
+<div layout-align="center start" layout="row" ng-cloak class="md-inline-form" md-theme="{{ activity || 'default' }}" md-theme-watch>
+  <md-content layout-padding flex-gt-sm="50" flex="90">
+    <div>
+      <md-list>
+
+        <md-list-item class="secondary-button-padding" ng-repeat="result in results" ng-show="results.length > 0">
+          <img ng-src="{{getSmallResultImage(result)}}" class="md-avatar" />
+          <p>{{getResultScore(result)}}</p>
+          <md-button class="md-raised md-warn" ng-click="delete(result)">Supprimer</md-button>
+        </md-list-item>
+
+        <md-list-item class="secondary-button-padding" ng-show="results === undefined || results.length === 0">
+          <p>Il n'y a pas de r&eacute;sultats pour le moment...</p>
+        </md-list-item>
+
+      </md-list>
+    </div>
+  </md-content>
+</div>

@@ -1,0 +1,18 @@
+{
+  "name": "10years",
+  "description": "Front end application used to manage the results of the Obeo 10 year anniversary",
+  "version": "1.0.0",
+  "license": "Proprietary",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.4.x",
+    "angular-ui-router": "^0.2.x",
+    "angular-animate": "v1.4.x",
+    "angular-aria": "^1.4.x",
+    "angular-material": "^1.0.0",
+    "angular-cookies": "~1.4.x"
+  },
+  "devDependencies": {
+    "angular-material": "^1.0.0"
+  }
+}
