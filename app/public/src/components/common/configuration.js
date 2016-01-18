@@ -10,11 +10,11 @@ let moduleConfiguration = ($httpProvider, $stateProvider, $urlRouterProvider, $m
     templateUrl: 'src/sections/dashboard/dashboard.html',
     controller: 'DashboardController'
   }).state('leaderboard',  {
-    url: '/leaderboard',
+    url: '/leaderboard?rotation',
     templateUrl: 'src/sections/leaderboard/leaderboard.html',
     controller: 'LeaderboardController'
   }).state('activityViewAllResults',  {
-    url: '/activities/:activity',
+    url: '/activities/:activity?rotation',
     templateUrl: 'src/sections/activity/view-all-results/view-all-results.html',
     controller: 'ActivityViewAllResultsController'
   }).state('activityNewResult',  {

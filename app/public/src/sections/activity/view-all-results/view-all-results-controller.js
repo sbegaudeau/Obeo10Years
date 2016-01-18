@@ -1,7 +1,7 @@
 'use strict';
 
 class ActivityViewAllResultsController {
-  constructor($scope, $state, $stateParams, $http, $cookies) {
+  constructor($scope, $state, $stateParams, $http, $cookies, $timeout) {
     $scope.activity = $stateParams.activity;
 
     $scope.goTo = (stateName) => {
@@ -30,6 +30,35 @@ class ActivityViewAllResultsController {
     };
 
     update();
+
+    if ($stateParams.rotation) {
+      let activity = $stateParams.activity;
+
+      let newActivity = undefined;
+      if (activity === 'mario') {
+        newActivity = 'cocktail';
+      } else if (activity === 'cocktail') {
+        newActivity = 'quizz';
+      } else if (activity === 'quizz') {
+        newActivity = 'babyfoot';
+      } else if (activity === 'babyfoot') {
+        newActivity = 'lego';
+      } else if (activity === 'lego') {
+        newActivity = 'robots';
+      } else if (activity === 'robots') {
+        // nothing to go to the leaderboard
+      }
+
+      if (newActivity !== undefined) {
+        $timeout(() => {
+          $state.go('activityViewAllResults', {activity: newActivity, rotation: 'true'});
+        }, 10000);
+      } else {
+        $timeout(() => {
+          $state.go('leaderboard', {rotation: 'true'});
+        }, 10000);
+      }
+    }
   }
 }
 
@@ -40,6 +69,7 @@ let activityViewAllResultsControllerDeclaration = [
   '$stateParams',
   '$http',
   '$cookies',
+  '$timeout',
   ActivityViewAllResultsController
 ];
 

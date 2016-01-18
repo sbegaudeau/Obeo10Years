@@ -1,7 +1,7 @@
 'use strict';
 
 class LeaderboardController {
-  constructor($scope, $state, $http) {
+  constructor($scope, $state, $http, $timeout, $stateParams) {
     $scope.goTo = (stateName) => {
       $state.go(stateName);
     };
@@ -36,6 +36,12 @@ class LeaderboardController {
       console.log('shutting down the connection');
       socket.disconnect();
     });
+
+    if ($stateParams.rotation) {
+      $timeout(() => {
+        $state.go('activityViewAllResults', {activity: 'mario', rotation: 'true'});
+      }, 10000);
+    }
   }
 }
 
@@ -44,6 +50,8 @@ let leaderboardControllerDeclaration = [
   '$scope',
   '$state',
   '$http',
+  '$timeout',
+  '$stateParams',
   LeaderboardController
 ];
 
