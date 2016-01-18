@@ -25,22 +25,14 @@ class LeaderboardController {
 
     update();
 
-    let socket = io.connect('http://localhost:3000');
-    socket.on('results_updated', function(msg) {
-      console.log('refreshing the results');
-      update();
-      $scope.$apply();
-    });
-
-    $scope.$on("$destroy", function() {
-      console.log('shutting down the connection');
-      socket.disconnect();
-    });
-
     if ($stateParams.rotation) {
-      $timeout(() => {
+      let timer = $timeout(() => {
         $state.go('activityViewAllResults', {activity: 'mario', rotation: 'true'});
       }, 10000);
+
+      $scope.$on('$destroy', (event) => {
+        $timeout.cancel(timer);
+      });
     }
   }
 }

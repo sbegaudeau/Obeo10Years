@@ -50,13 +50,19 @@ class ActivityViewAllResultsController {
       }
 
       if (newActivity !== undefined) {
-        $timeout(() => {
+        let timer = $timeout(() => {
           $state.go('activityViewAllResults', {activity: newActivity, rotation: 'true'});
         }, 10000);
+        $scope.$on('$destroy', (event) => {
+          $timeout.cancel(timer);
+        });
       } else {
-        $timeout(() => {
+        let timer = $timeout(() => {
           $state.go('leaderboard', {rotation: 'true'});
         }, 10000);
+        $scope.$on('$destroy', (event) => {
+          $timeout.cancel(timer);
+        });
       }
     }
   }
