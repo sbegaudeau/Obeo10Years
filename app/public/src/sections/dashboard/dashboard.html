@@ -1,7 +1,7 @@
 <md-toolbar layout="row" >
   <div class="md-toolbar-tools">
     <h1>
-      <span>dashboard</span>
+      <a href="https://twitter.com/hashtag/weareobeo?src=hash">#WeAreObeo</a>
     </h1>
     <span flex></span>
     <md-button class="md-icon-button" aria-label="SignIn">
@@ -16,36 +16,49 @@
                 md-gutter="12px" md-gutter-gt-sm="8px">
 
     <md-grid-tile class="mario" md-rowspan="2" md-rowspan-xs="1" md-rowspan-sm="1" md-rowspan-md="1" md-colspan="1" ng-click="goTo('activityViewAllResults', 'mario')">
+      <md-icon md-svg-src="assets/mario.svg" class="dashboard_icon"></md-icon>
       <md-grid-tile-footer>
         <h3>Mario</h3>
       </md-grid-tile-footer>
     </md-grid-tile>
 
-    <md-grid-tile class="cocktail" md-colspan-gt-md="2" md-colspan-xs="1" md-colspan-sm="1" md-colspan-md="1" ng-click="goTo('activityViewAllResults', 'cocktail')">
+    <md-grid-tile class="cocktail" md-colspan-gt-md="1" md-colspan-xs="1" md-colspan-sm="1" md-colspan-md="1" ng-click="goTo('activityViewAllResults', 'cocktail')">
+      <md-icon md-svg-src="assets/cocktail.svg" class="dashboard_icon"></md-icon>
       <md-grid-tile-footer>
         <h3>Cocktail</h3>
       </md-grid-tile-footer>
     </md-grid-tile>
 
+    <md-grid-tile class="quizz" md-colspan-gt-md="1" md-colspan-xs="1" md-colspan-sm="1" md-colspan-md="1" ng-click="goTo('activityViewAllResults', 'quizz')">
+      <md-icon md-svg-src="assets/quizz.svg" class="dashboard_icon"></md-icon>
+      <md-grid-tile-footer>
+        <h3>Quizz</h3>
+      </md-grid-tile-footer>
+    </md-grid-tile>
+
     <md-grid-tile class="lego" md-colspan-gt-md="2" md-colspan-ws="1" md-colspan-sm="1" md-colspan-md="1" ng-click="goTo('activityViewAllResults', 'lego')">
+      <md-icon md-svg-src="assets/lego.svg" class="dashboard_icon"></md-icon>
       <md-grid-tile-footer>
         <h3>Lego</h3>
       </md-grid-tile-footer>
     </md-grid-tile>
 
     <md-grid-tile class="babyfoot" md-rowspan-gt-md="1" ng-click="goTo('activityViewAllResults', 'babyfoot')">
+      <md-icon md-svg-src="assets/babyfoot.svg" class="dashboard_icon"></md-icon>
       <md-grid-tile-footer>
         <h3>Babyfoot</h3>
       </md-grid-tile-footer>
     </md-grid-tile>
 
     <md-grid-tile class="leaderboard" md-rowspan-gt-md="1" md-colspan="2" md-colspan-xs="1" md-colspan-sm="1" md-colspan-md="1" ng-click="goTo('leaderboard')">
+      <md-icon md-svg-src="assets/leaderboard.svg" class="dashboard_icon"></md-icon>
       <md-grid-tile-footer>
-        <h3>Scores</h3>
+        <h3>Classement g&eacute;n&eacute;ral</h3>
       </md-grid-tile-footer>
     </md-grid-tile>
 
     <md-grid-tile class="robots" md-rowspan-gt-md="1"  ng-click="goTo('activityViewAllResults', 'robots')">
+      <md-icon md-svg-src="assets/robots.svg" class="dashboard_icon"></md-icon>
       <md-grid-tile-footer>
         <h3>Robots</h3>
       </md-grid-tile-footer>

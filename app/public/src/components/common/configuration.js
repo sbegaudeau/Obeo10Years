@@ -38,6 +38,7 @@ let moduleConfiguration = ($httpProvider, $stateProvider, $urlRouterProvider, $m
   $mdThemingProvider.theme('babyfoot').primaryPalette('green', {default: '800'}).accentPalette('red');
   $mdThemingProvider.theme('lego').primaryPalette('cyan', {default: '700'}).accentPalette('red');
   $mdThemingProvider.theme('robots').primaryPalette('blue-grey', {default: '600'}).accentPalette('red');
+  $mdThemingProvider.theme('quizz').primaryPalette('blue', {default: '800'}).accentPalette('red');
 };
 
 export {moduleConfiguration};

@@ -12,20 +12,24 @@ class ActivityViewAllResultsController {
       return $cookies.get('OBEO_10YEARS_API_KEY') !== undefined;
     };
 
-    $http.get('/api/v1.0/activities/' + $stateParams.activity + '/results').then((response) => {
-      let data = response.data;
-      if (response.status === 200 && data.length > 1) {
-        let first = data[0];
-        let others = [];
+    let update = () => {
+      $http.get('/api/v1.0/activities/' + $stateParams.activity + '/results').then((response) => {
+        let data = response.data;
+        if (response.status === 200 && data.length > 1) {
+          let first = data[0];
+          let others = [];
 
-        for (let i = 1; i < data.length; i = i + 1) {
-          others.push(data[i]);
+          for (let i = 1; i < data.length; i = i + 1) {
+            others.push(data[i]);
+          }
+
+          $scope.first = first;
+          $scope.others = others;
         }
+      });
+    };
 
-        $scope.first = first;
-        $scope.others = others;
-      }
-    });
+    update();
   }
 }
 

@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var resultSchema = mongoose.Schema({
     activity: {
       type: String,
-      enum: ['mario', 'cocktail', 'lego', 'robots', 'babyfoot']
+      enum: ['mario', 'cocktail', 'lego', 'robots', 'babyfoot', 'quizz']
     },
     team: {
       type: String,

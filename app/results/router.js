@@ -15,35 +15,40 @@ let getResults = (req, res) => {
           'cocktail': 0,
           'lego': 0,
           'robots': 0,
-          'babyfoot': 0
+          'babyfoot': 0,
+          'quizz': 0
         },
         'got': {
           'mario': 0,
           'cocktail': 0,
           'lego': 0,
           'robots': 0,
-          'babyfoot': 0
+          'babyfoot': 0,
+          'quizz': 0
         },
         'bttf': {
           'mario': 0,
           'cocktail': 0,
           'lego': 0,
           'robots': 0,
-          'babyfoot': 0
+          'babyfoot': 0,
+          'quizz': 0
         },
         'matrix': {
           'mario': 0,
           'cocktail': 0,
           'lego': 0,
           'robots': 0,
-          'babyfoot': 0
+          'babyfoot': 0,
+          'quizz': 0
         },
         'himym': {
           'mario': 0,
           'cocktail': 0,
           'lego': 0,
           'robots': 0,
-          'babyfoot': 0
+          'babyfoot': 0,
+          'quizz': 0
         }
       };
 
