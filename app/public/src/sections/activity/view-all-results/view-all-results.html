@@ -1,8 +1,8 @@
-<md-toolbar layout="row" md-theme="{{ activity || 'default' }}" md-theme-watch>
-  <div class="md-toolbar-tools">
-    <h2>
-      <span>{{activity}} - classement</span>
-    </h2>
+<md-toolbar ng-class="{'md-tall': rotation}" layout="row" md-theme="{{ activity || 'default' }}" md-theme-watch>
+  <div class="md-toolbar-tools" flex>
+    <h1 ng-class="{'big-toolbar': rotation}">
+      <span class="md-flex">{{activity}} - classement</span>
+    </h1>
     <span flex></span>
     <md-button class="md-icon-button" aria-label="New" ng-show="hasAPIKey()">
       <md-icon md-svg-icon="assets/new.svg" ng-click="goTo('activityNewResult')"></md-icon>

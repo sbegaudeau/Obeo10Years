@@ -1,8 +1,8 @@
-<md-toolbar layout="row" >
+<md-toolbar ng-class="{'md-tall': rotation}" layout="row" >
   <div class="md-toolbar-tools">
-    <h2>
+    <h1 ng-class="{'big-toolbar': rotation}">
       <span>classement g&eacute;n&eacute;ral</span>
-    </h2>
+    </h1>
     <span flex></span>
     <md-button class="md-icon-button" aria-label="Home">
       <md-icon md-svg-icon="assets/home.svg" ng-click="goTo('dashboard')"></md-icon>

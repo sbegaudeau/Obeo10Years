@@ -2,6 +2,8 @@
 
 class LeaderboardController {
   constructor($scope, $state, $http, $timeout, $stateParams) {
+    $scope.rotation = $stateParams.rotation;
+    
     $scope.goTo = (stateName) => {
       $state.go(stateName);
     };

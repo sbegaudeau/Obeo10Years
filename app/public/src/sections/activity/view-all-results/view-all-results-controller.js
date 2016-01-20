@@ -3,6 +3,7 @@
 class ActivityViewAllResultsController {
   constructor($scope, $state, $stateParams, $http, $cookies, $timeout) {
     $scope.activity = $stateParams.activity;
+    $scope.rotation = $stateParams.rotation;
 
     $scope.goTo = (stateName) => {
       $state.go(stateName, {activity: $stateParams.activity});
